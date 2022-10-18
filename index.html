@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Accordion</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: 343840;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(232, 232, 232);
+      }
+
+      .contaniner {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: 750px;
+        row-gap: 50px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        row-gap: 40px;
+        column-gap: 40px;
+        align-items: center;
+        padding: 30px 25px;
+      }
+
+      .icon {
+        color: #a5d8ff;
+
+        width: 24px;
+        height: 24px;
+      }
+
+      .step {
+        color: #a5d8ff;
+        font-size: 24px;
+        font-weight: 500;
+      }
+
+      .question {
+        color: #a5d8ff;
+      }
+
+      .grid {
+        box-shadow: -3px -3px 3px rgba(255, 255, 255, 0.2),
+          5px 5px 5px rgba(0, 0, 0, 0.1),
+          inset -3px -3px 5px rgba(255, 255, 255, 0.2),
+          inset 3px 3px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .description {
+        display: none;
+
+        grid-column: 2/3;
+      }
+
+      ul {
+        margin-left: 20px;
+        color: #868e96;
+        font-size: 14px;
+      }
+
+      .description p {
+        margin-bottom: 20px;
+      }
+
+      P {
+        line-height: 1.5;
+      }
+      li {
+        line-height: 2;
+      }
+
+      .open {
+        border-top: 2px solid #1c7ed6;
+      }
+
+      .open .description {
+        display: block;
+      }
+
+      .open .step,
+      .open .question,
+      .open .icon {
+        color: #1c7ed6;
+      }
+
+      .open .icon1 {
+        display: none;
+      }
+      .icon2 {
+        display: none;
+      }
+
+      .open .icon2 {
+        display: block;
+      }
+    </style>
+
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="contaniner">
+      <div class="grid">
+        <div class="step"><p>01</p></div>
+
+        <div class="question">
+          <h2>Where are these chairs assembled?</h2>
+        </div>
+        <div class="icon clicking-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-6 h-6 icon1"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
+              clip-rule="evenodd"
+            />
+          </svg>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-6 h-6 icon2"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M11.47 7.72a.75.75 0 011.06 0l7.5 7.5a.75.75 0 11-1.06 1.06L12 9.31l-6.97 6.97a.75.75 0 01-1.06-1.06l7.5-7.5z"
+              clip-rule="evenodd"
+            />
+          </svg>
+
+          <!-- <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class=""
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M5 1517-7 7 7"
+            />
+          </svg> -->
+        </div>
+
+        <div class="description">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti
+            non molestias est asperiores sunt, fugiat laborum eveniet sapiente
+            nihil repudiandae iusto, voluptate ipsa error at architecto fugit
+            dolorum! Voluptatibus rerum laborum totam assumenda error omnis, at
+            et accusantium cupiditate voluptates repellendus nulla, laboriosam
+            velit dolore.
+          </p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet consectetur</li>
+            <li>error nemo porro deleniti laboriosam recusandae</li>
+
+            <li>delectus ipsam. Quae aliquam ullam</li>
+
+            <li>doloremque tenetur commodil</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="step"><p>02</p></div>
+
+        <div class="question">
+          <h2>Where are these chairs assembled?</h2>
+        </div>
+        <div class="icon clicking-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-6 h-6 icon1"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
+              clip-rule="evenodd"
+            />
+          </svg>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-6 h-6 icon2"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M11.47 7.72a.75.75 0 011.06 0l7.5 7.5a.75.75 0 11-1.06 1.06L12 9.31l-6.97 6.97a.75.75 0 01-1.06-1.06l7.5-7.5z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <div class="description">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum
+            consequatur, deleniti deserunt incidunt sequi quis rem officiis,
+            adipisci soluta reiciendis eos quisquam earum illo laboriosam error
+            hic. Sequi, tempora. Ut explicabo quisquam, nam asperiores velit est
+            consequatur a pariatur, perspiciatis reprehenderit ipsa! Laborum
+            quasi atque odit voluptatum soluta autem aliquid?
+          </p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet consectetur</li>
+            <li>error nemo porro deleniti laboriosam recusandae</li>
+
+            <li>delectus ipsam. Quae aliquam ullam</li>
+
+            <li>doloremque tenetur commodil</li>
+          </ul>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="step"><p>03</p></div>
+
+        <div class="question">
+          <h2>Where are these chairs assembled?</h2>
+        </div>
+        <div class="icon clicking-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-6 h-6 icon1"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
+              clip-rule="evenodd"
+            />
+          </svg>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-6 h-6 icon2"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M11.47 7.72a.75.75 0 011.06 0l7.5 7.5a.75.75 0 11-1.06 1.06L12 9.31l-6.97 6.97a.75.75 0 01-1.06-1.06l7.5-7.5z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <div class="description">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolor
+            error nemo porro deleniti laboriosam recusandae officia impedit
+            delectus ipsam. Quae aliquam ullam perferendis reiciendis porro aut
+            doloremque tenetur commodil
+          </p>
+
+          <ul>
+            <li>Lorem ipsum dolor sit amet consectetur</li>
+
+            <li>error nemo porro deleniti laboriosam recusandae</li>
+
+            <li>delectus ipsam. Quae aliquam ullam</li>
+
+            <li>doloremque tenetur commodi!</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
